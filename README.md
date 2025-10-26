@@ -1,47 +1,59 @@
-Assignment 2 – Fit & Interpret Probability
-
-Distributions for Claim Severity
-**Course:** Data Analytics for Actuarial Science
-**Week:** 5
-**Dataset:** claim_severity.csv (column: claim_amount)
-**Deliverables:** Notebook + brief PDF summary + figures (Use proper naming format e.g. std_number-file_name-assignment2.ipynb)
-
-Learning Objectives
-• Diagnose heavy-tailed behavior in claim severities.
-• Fit candidate severity distributions (Lognormal, Gamma, Weibull, Pareto).
-• Compare models using information criteria and goodness-of-fit diagnostics.
-• Compute tail risk measures (VaR/TVaR) and interpret actuarially.
-
-Part A — Exploratory Data Analysis (EDA) (10 pts)
-• Load claim_severity.csv and report: sample size n, mean, median, std, coefficient of variation,
-skewness, kurtosis.
-• Plot: histogram (density-scaled) with log-x, empirical CDF, and mean excess plot.
-• Write 2–3 sentences diagnosing tail heaviness.
-
-Part B — Parametric Fits via MLE (30 pts)
-• Fit Lognormal, Gamma, Weibull, and Pareto using MLE.
-• Report parameter estimates and standard errors (or bootstrap CIs).
-• Overlay fitted densities on histogram (log-x).
-
-Part C — Model Adequacy & Selection (30 pts)
-• Compute log-likelihood, AIC, and BIC. Rank models.
-• Goodness-of-fit: QQ-plots, KS and/or AD tests.
-• Select a preferred model and justify.
-
-Part D — Tail Risk & Pricing (20 pts)
-• For preferred model, compute VaR95, VaR99, TVaR95, TVaR99.
-• Interpret tail measures for pricing and capital.
-
-Part E — Sensitivity Check (10 pts)
-• Truncate top 1% of claims and refit preferred model.
-• Compare parameters and VaR/TVaR; discuss robustness.
-
-Bonus (+5 pts)
-Fit a truncated Lognormal or mixture (e.g., 2-component Lognormal) and compare AIC/BIC.
-Grading Rubric (100 pts)
-• EDA: 10
-• Fits: 30
-• Selection: 30
-• Tail risk: 20
-• Sensitivity: 10
-• Bonus: +5
+Assignment 3 – Predicting Policyholder Churn with Machine Learning
+Week: 7
+Duration: 1 week
+Dataset: policyholder_churn.csv (created earlier in your Week 7 materials)
+Deliverables: 1 Jupyter Notebook + 2–3-page brief report (PDF)
+Weight: 15 % of course grade
+🎯 Learning Objectives
+By completing this assignment, students will be able to:
+Apply supervised machine-learning methods for churn prediction in insurance data.
+Perform data preprocessing, encoding, and scaling of mixed features.
+Train and compare classification models (logistic regression, decision tree, random forest, and SVM).
+Evaluate predictive performance using cross-validation and resampling methods.
+Interpret model output in an actuarial context (e.g., retention strategy and risk-based pricing).
+🧾 Dataset Description
+The file policyholder_churn.csv contains 6 000 observations with the following columns:
+Variable	Description
+age	Policyholder age (18–80)
+tenure_years	Years with the insurer
+num_claims	Number of claims filed
+policy_type	Type of insurance (Life / Health / Motor)
+annual_premium	Annual premium amount
+churn	Binary target (1 = policy lapsed, 0 = retained)
+🧩 Assignment Tasks
+Part A — Data Preparation (10 pts)
+Load and inspect the dataset.
+Handle missing values (if any).
+Encode categorical features using one-hot or label encoding.
+Standardize numerical variables.
+Split data into train and test sets (70 % / 30 %).
+Part B — Model Training (40 pts)
+Fit four classification models:
+Logistic Regression
+Decision Tree
+Random Forest
+Support Vector Machine (RBF kernel)
+Use 5-fold cross-validation to estimate accuracy and ROC-AUC for each model.
+Display results in a summary table.
+Part C — Model Comparison & Interpretation (25 pts)
+Compare models by their mean ROC-AUC and standard deviation.
+Discuss bias-variance trade-offs for each method.
+Identify key drivers of churn (e.g., premium levels, tenure).
+Interpret the best model from an actuarial perspective (e.g., customer retention policy).
+Part D — Resampling & Validation (15 pts)
+Use bootstrap resampling (100 iterations) to estimate the confidence interval for the best model’s accuracy.
+Compare bootstrap results with cross-validation estimates.
+Briefly explain the advantages of resampling methods in insurance analytics.
+Part E — Reporting (10 pts)
+Summarize results in a 2–3 page PDF report including:
+Tables of model accuracy and AUC
+Plots (ROC curves, feature importance)
+Short discussion of managerial implications for policyholder retention.
+🧮 Suggested Structure for Notebook
+Import libraries and dataset
+Data cleaning and EDA
+Encoding and scaling
+Train/test split and cross-validation
+Model training and comparison
+Bootstrap validation
+Interpretation and summary
