@@ -32,6 +32,7 @@ Handle missing values (if any).
 Encode categorical features using one-hot or label encoding.
 Standardize numerical variables.
 Split data into train and test sets (70 % / 30 %).
+
 Part B — Model Training (40 pts)
 Fit four classification models:
 Logistic Regression
@@ -40,15 +41,18 @@ Random Forest
 Support Vector Machine (RBF kernel)
 Use 5-fold cross-validation to estimate accuracy and ROC-AUC for each model.
 Display results in a summary table.
+
 Part C — Model Comparison & Interpretation (25 pts)
 Compare models by their mean ROC-AUC and standard deviation.
 Discuss bias-variance trade-offs for each method.
 Identify key drivers of churn (e.g., premium levels, tenure).
 Interpret the best model from an actuarial perspective (e.g., customer retention policy).
+
 Part D — Resampling & Validation (15 pts)
 Use bootstrap resampling (100 iterations) to estimate the confidence interval for the best model’s accuracy.
 Compare bootstrap results with cross-validation estimates.
 Briefly explain the advantages of resampling methods in insurance analytics.
+
 Part E — Reporting (10 pts)
 Summarize results in a 2–3 page PDF report including:
 Tables of model accuracy and AUC
