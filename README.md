@@ -1,17 +1,20 @@
 Assignment 3 – Predicting Policyholder Churn with Machine Learning
 Week: 7
-Duration: 1 week
+
+Duration: 2 weeks
 Dataset: policyholder_churn.csv (created earlier in your Week 7 materials)
 Deliverables: 1 Jupyter Notebook + 2–3-page brief report (PDF)
 Weight: 15 % of course grade
-🎯 Learning Objectives
+
+Learning Objectives
 By completing this assignment, students will be able to:
 Apply supervised machine-learning methods for churn prediction in insurance data.
 Perform data preprocessing, encoding, and scaling of mixed features.
 Train and compare classification models (logistic regression, decision tree, random forest, and SVM).
 Evaluate predictive performance using cross-validation and resampling methods.
 Interpret model output in an actuarial context (e.g., retention strategy and risk-based pricing).
-🧾 Dataset Description
+
+Dataset Description
 The file policyholder_churn.csv contains 6 000 observations with the following columns:
 Variable	Description
 age	Policyholder age (18–80)
@@ -20,7 +23,9 @@ num_claims	Number of claims filed
 policy_type	Type of insurance (Life / Health / Motor)
 annual_premium	Annual premium amount
 churn	Binary target (1 = policy lapsed, 0 = retained)
-🧩 Assignment Tasks
+
+
+Assignment Tasks
 Part A — Data Preparation (10 pts)
 Load and inspect the dataset.
 Handle missing values (if any).
@@ -49,7 +54,7 @@ Summarize results in a 2–3 page PDF report including:
 Tables of model accuracy and AUC
 Plots (ROC curves, feature importance)
 Short discussion of managerial implications for policyholder retention.
-🧮 Suggested Structure for Notebook
+Suggested Structure for Notebook
 Import libraries and dataset
 Data cleaning and EDA
 Encoding and scaling
